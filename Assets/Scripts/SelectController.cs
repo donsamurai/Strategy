@@ -71,6 +71,8 @@ public class SelectController : MonoBehaviour
 
                 foreach (var el in hits)
                 {
+                    if(el.collider.CompareTag("Enemy")) continue;
+                    
                     players.Add(el.transform.gameObject);
                     el.transform.GetChild(0).gameObject.SetActive(true); // Делаем HealthBar активным во время выделения 
                 }
