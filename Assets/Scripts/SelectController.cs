@@ -1,7 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
+using UnityEngine.Playables;
 using UnityEngine.PlayerLoop;
+using UnityEngine.UI;
 
 public class SelectController : MonoBehaviour
 {
@@ -16,12 +19,23 @@ public class SelectController : MonoBehaviour
         _cam = GetComponent<Camera>();
     }
     private void Update() {
+
+        if(Input.GetMouseButtonDown(1) && players.Count > 0) {
+
+            Ray ray = _cam.ScreenPointToRay(Input.mousePosition);
+
+            if(Physics.Raycast(ray, out RaycastHit agentTarget, 1000f,layer ))
+                foreach (var el in players)
+                    el.GetComponent<NavMeshAgent>().SetDestination(agentTarget.point);
+        }
         if(Input.GetMouseButtonDown(0)){
+            foreach (var el in players)        
+                el.transform.GetChild(0).gameObject.SetActive(false); // Делаем наш Healthbar неактивным
+
             if(players.Count > 0)
                 players.Clear();
 
             Ray ray = _cam.ScreenPointToRay(Input.mousePosition);
-           
 
             if(Physics.Raycast(ray, out _hit, 1000f,layer ))
                 _cubeSelection =Instantiate(cube, new Vector3(_hit.point.x, 1,_hit.point.z), Quaternion.identity);
@@ -58,6 +72,7 @@ public class SelectController : MonoBehaviour
                 foreach (var el in hits)
                 {
                     players.Add(el.transform.gameObject);
+                    el.transform.GetChild(0).gameObject.SetActive(true); // Делаем HealthBar активным во время выделения 
                 }
             Destroy(_cubeSelection);
         

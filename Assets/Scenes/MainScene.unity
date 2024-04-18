@@ -1215,6 +1215,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8418142449296171454, guid: 6d4589dc9441a894fa3062b4c6855966, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1878,7 +1882,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &634517235
 Transform:
@@ -2048,7 +2052,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &697221210
 Transform:
@@ -7431,7 +7435,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &812427225
 Transform:
@@ -8016,10 +8020,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e02ea9404b72c64cb8e14f5ee57cc32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cube: {fileID: 6284577844370469363, guid: f50a8b1aadaa84648865acd47f053ea8, type: 3}
+  cube: {fileID: 4956849874292112195, guid: f50a8b1aadaa84648865acd47f053ea8, type: 3}
+  players: []
   layer:
     serializedVersion: 2
     m_Bits: 128
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1001 &975015647
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10627,7 +10635,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2030461927
 Transform:
