@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\ButtunPlaceBuild.cs" />
     <Compile Include="Assets\Scripts\PlayceObjects.cs" />
+    <Compile Include="Assets\Scripts\SelectController.cs" />
     <Compile Include="Assets\Scripts\Rain.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
   </ItemGroup>
