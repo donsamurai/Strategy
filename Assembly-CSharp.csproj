@@ -64,10 +64,12 @@
     <Analyzer Include="D:\Unity\2022.3.24f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\BulletController.cs" />
     <Compile Include="Assets\Scripts\AutoCarCreate.cs" />
     <Compile Include="Assets\Scripts\GenerateEnemy.cs" />
     <Compile Include="Assets\Scripts\ButtunPlaceBuild.cs" />
     <Compile Include="Assets\Scripts\PlayceObjects.cs" />
+    <Compile Include="Assets\Scripts\CarAttack.cs" />
     <Compile Include="Assets\Scripts\SelectController.cs" />
     <Compile Include="Assets\Scripts\Rain.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />

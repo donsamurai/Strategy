@@ -29,8 +29,9 @@ public class SelectController : MonoBehaviour
                     el.GetComponent<NavMeshAgent>().SetDestination(agentTarget.point);
         }
         if(Input.GetMouseButtonDown(0)){
-            foreach (var el in players)        
-                el.transform.GetChild(0).gameObject.SetActive(false); // Делаем наш Healthbar неактивным
+            foreach (var el in players)
+                if(el != null)       
+                    el.transform.GetChild(0).gameObject.SetActive(false); // Делаем наш Healthbar неактивным
 
             if(players.Count > 0)
                 players.Clear();
